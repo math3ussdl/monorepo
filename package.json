@@ -1,0 +1,29 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "test": "jest",
+    "axios-config": "yarn workspace @monorepo/axios-config",
+    "eslint-config": "yarn workspace @monorepo/eslint-config",
+    "app": "yarn workspace @monorepo/app",
+    "app:expo": "yarn workspace @monorepo/app-expo",
+    "server": "yarn workspace @monorepo/server",
+    "web": "yarn workspace @monorepo/web"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "author": "Hugo Lima <limabrot879@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@monorepo/eslint-config": "*",
+    "@types/jest": "^26.0.13",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.2"
+  }
+}
